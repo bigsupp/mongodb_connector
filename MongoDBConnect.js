@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 
-const MONGO_URI = 'mongodb://localhost:27017/test'
-const MONGO_OPTS = {
-  useNewUrlParser: true
-}
+const MONGO_URI = process.env.MONGO_URI
+const MONGO_OPTS = process.env.MONGO_OPTS
 
 let isConnectedBefore = false;
 
