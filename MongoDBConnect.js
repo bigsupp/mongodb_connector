@@ -1,12 +1,11 @@
 const mongoose = require('mongoose');
 
 const MONGO_URI = process.env.MONGO_URI
-const MONGO_OPTS = process.env.MONGO_OPTS
 
 let isConnectedBefore = false;
 
-module.exports = () => {
-  mongoose.connect(MONGO_URI, MONGO_OPTS);
+module.exports = (options) => {
+  mongoose.connect(MONGO_URI, options);
 }
 
 mongoose.connection.on('error', () => {
