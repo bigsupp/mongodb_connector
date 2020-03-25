@@ -13,8 +13,6 @@ Example of mongoose connection options:
   "useFindAndModify": false,
   "useCreateIndex": true,
   "auto_reconnect": true,
-  "reconnectTries": 180,
-  "reconnectInterval": 100,
   "connectTimeoutMS": 1000,
   "socketTimeoutMS": 60000,
   "user": process.env.MONGO_AUTH_USER,
