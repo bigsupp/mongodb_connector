@@ -16,7 +16,7 @@ Example of mongoose connection options:
   "reconnectTries": 180,
   "reconnectInterval": 100,
   "connectTimeoutMS": 1000,
-  "socketTimeoutMS": 60000
+  "socketTimeoutMS": 60000,
   "user": process.env.MONGO_AUTH_USER,
   "pass": process.env.MONGO_AUTH_PASS,
   "authSource": process.env.MONGO_AUTH_DB
