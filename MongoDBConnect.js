@@ -1,20 +1,18 @@
 const mongoose = require('mongoose');
 
-const MONGO_URI = process.env.MONGO_URI
-
 let isConnectedBefore = false;
 
 module.exports = (options) => {
-  const default_options = {
+  mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/test', options || {
     "useNewUrlParser": true,
+    "useUnifiedTopology": true,
     "useCreateIndex": true,
     "auto_reconnect": true,
     "reconnectTries": 180,
     "reconnectInterval": 1000,
     "connectTimeoutMS": 1000,
     "socketTimeoutMS": 60000
-  }
-  mongoose.connect(MONGO_URI, options || default_options);
+  });
 }
 
 mongoose.connection.on('error', () => {
