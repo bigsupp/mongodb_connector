@@ -8,8 +8,6 @@ module.exports = (options) => {
     "useUnifiedTopology": true,
     "useCreateIndex": true,
     "auto_reconnect": true,
-    "reconnectTries": 180,
-    "reconnectInterval": 1000,
     "connectTimeoutMS": 1000,
     "socketTimeoutMS": 60000
   });
