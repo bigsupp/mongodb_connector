@@ -2,8 +2,10 @@ const mongoose = require('mongoose');
 
 let isConnectedBefore = false;
 
+const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/test'
+
 module.exports = (options) => {
-  mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/test', options || {
+  mongoose.connect(mongoURI, options || {
     "useNewUrlParser": true,
     "useUnifiedTopology": true,
     "useCreateIndex": true,
